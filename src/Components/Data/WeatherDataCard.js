@@ -54,26 +54,6 @@ const WeatherDataCard = (props) => {
                      <p>{weatherData.humidity}%</p>
                     </div>
                 </div>
-                {/* <div id="" class="info-card">
-                    <div class="col-md-4">
-                        <h3></h3>
-                    </div>
-                    <div class="col-md-4">
-                        <p>Sunrise</p>
-                    </div>
-                    <div class="col-md-4">
-                    </div>
-                </div>
-                <div class="info-card">
-                    <div class="col-md-4">
-                        <h3></h3>
-                    </div>
-                    <div class="col-md-4">
-                        <p>Sunset</p>
-                    </div>
-                    <div class="col-md-4">
-                    </div>
-                </div> */}
             </div>
 
             
