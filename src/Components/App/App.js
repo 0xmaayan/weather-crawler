@@ -1,7 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// style
-import './App.css';
 // components
 import SearchBar from '../SearchBar/SearchBar';
 import Weather from '../Data/Weather';
