@@ -5,79 +5,71 @@ import './style.css';
 const WeatherDataCard = (props) => {
   
   const { weatherData } = props;
-console.log(weatherData);
+
   return (
-    <div id="" className="col-md-6">
+    <div className="col-md-6 col-sm-12" style={{marginTop: '15px'}}>
 
-        <div id="header" class="">
-            <div id="main-header-container" class="">
-                <div class="degree"></div>
-                <div id='temperature-cell' class=''>
-
-                    <div id='temp-cell-number'>
-                        <div id="temp-cell-degree">
-                            {/* <!-- degree symbol for temp --> */}
-                        </div>
-                        {weatherData.temp}
-                    </div>
-                    {/* <!-- location goes here --> */}
-                    <div id="temp-cell-city">
-                        <p></p>
-                    </div>
-                </div>
-                <div id='image-cell' class=''>
-                    {/* <!-- image goes here on load --> */}
-                </div>
+        <div id="header">
+            <div className="cityName">
+              <span>City: </span>
+              <span>{weatherData.name}</span>
             </div>
+
+            <div className="degree col-md-6 col-sm-6 col-xs-6">
+              <span>{weatherData.temp}</span>
+              <span>°C</span>
+            </div>
+
+            <div className="weatherImg col-md-6 col-sm-6 col-xs-6">
+              <img alt='' src={weatherData.icon} />
+            </div>
+            
         </div>
 
-        <div class="">
-            <div class="" id="tab-header">
-                Info
-            </div>
-
-            <div class="" id="info-panel">
-                <div id="" class="info-card">
-                    <div id="box-wind-spd" class="box-left box-info">
-                        <h3></h3>
+        <div className="infoWrapper">
+            <div className="" id="info-panel">
+                <div id="" className="info-card">
+                    <div className="col-md-4 col-xs-4">
+                        <img alt='' className='infoImage' src="img/windsock.png" />
                     </div>
-                    <div id="box-wind-text" class="box-middle box-info">
+                    <div className="col-md-4 col-xs-4">
                         <p>Wind Speed</p>
                     </div>
-                    <div id="box-wind-icon" class="box-right box-info">
-                        <div id="pole"></div>
+                    <div className="col-md-4 col-xs-4">
+                        <p>{weatherData.wind} km/h</p>
                     </div>
                 </div>
-                <div id="" class="info-card">
-                    <div id="box-humidity-percent" class="box-left box-info">
-                        <h3></h3>
+                <div id="" className="info-card">
+                    <div className="col-md-4 col-xs-4">
+                    <img alt='' className='infoImage' src="img/humidity.png" />
                     </div>
-                    <div id="box-humidity-text" class="box-middle box-info">
+                    <div className="col-md-4 col-xs-4">
                         <p>Humidity</p>
                     </div>
-                    <div id="box-wind-icon" class="box-right box-info">
+                    <div className="col-md-4 col-xs-4">
+                     <p>{weatherData.humidity}%</p>
                     </div>
                 </div>
-                <div id="" class="info-card">
-                    <div id="box-sunrise-time" class="box-left box-info time">
+                {/* <div id="" class="info-card">
+                    <div class="col-md-4">
                         <h3></h3>
                     </div>
-                    <div id="box-sunrise-text" class="box-middle box-info">
+                    <div class="col-md-4">
                         <p>Sunrise</p>
                     </div>
-                    <div id="box-sunrise-icon" class="box-right box-info">
+                    <div class="col-md-4">
                     </div>
                 </div>
-                <div id="" class="info-card">
-                    <div id="box-sunset-time" class="box-left box-info time">
+                <div class="info-card">
+                    <div class="col-md-4">
                         <h3></h3>
                     </div>
-                    <div id="box-sunset-text" class="box-middle box-info">
+                    <div class="col-md-4">
                         <p>Sunset</p>
                     </div>
-                    <div id="box-wind-icon" class="box-right box-info">
+                    <div class="col-md-4">
                     </div>
-                </div>
+                </div> */}
             </div>
 
             

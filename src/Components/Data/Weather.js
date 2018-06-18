@@ -11,7 +11,7 @@ class Weather extends React.Component {
   
   renderData(cityWeatherData){
     return (
-      <WeatherDataCard weatherData={cityWeatherData}/>
+      <WeatherDataCard key={cityWeatherData.name} weatherData={cityWeatherData}/>
     )
   }
 
@@ -20,7 +20,7 @@ class Weather extends React.Component {
     const { data } = this.props;
 
     return (
-      <div className='col-md-12'>
+      <div className='col-md-12' style={{marginTop: '50px'}}>
         {data.map(this.renderData)}
       </div>
     )
