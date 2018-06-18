@@ -27,7 +27,7 @@ class App extends React.Component {
     const { weather_data } = this.props.site;
 
     return (
-      <div>
+      <div className='container' style={{marginTop: '50px'}}>
         <SearchBar/>
         <Weather data={weather_data}/>
       </div>
