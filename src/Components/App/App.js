@@ -22,8 +22,20 @@ class App extends React.Component {
   
   render(){
 
-    const { weather_data } = this.props.site;
+    const { weather_data, isLoading, hasError } = this.props.site;
 
+    if (isLoading) {
+      return (
+        <div className="custom-loader">
+          isLoading 
+        </div>
+      )
+    }
+
+    if (hasError) {
+      return (<div>error...</div>)
+    }
+    
     return (
       <div className='container' style={{marginTop: '50px'}}>
         <SearchBar/>

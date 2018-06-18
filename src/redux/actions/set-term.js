@@ -9,9 +9,13 @@ import slugify from 'slugify';
 export const getTermData = (city) => {  
 
   return (dispatch) => {
+    dispatch(siteIsLoading(true));
     Weather(slugify(city)).then(function(data) {
+      dispatch(siteIsLoading(false));
       dispatch(siteSetTerm(data));
-    });
+    }).catch(function (err) {
+      dispatch(siteHasError(true));
+    });;
   }
 
 }
@@ -24,14 +28,14 @@ export function siteSetTerm(data){
   };
 }
 
-export function tracksIsLoading(bool){
+export function siteIsLoading(bool){
   return {
     type: IS_LOADING,
     isLoading: bool
   };
 }
 
-export function tracksHasError(bool){
+export function siteHasError(bool){
   return {
     type: HAS_ERROR,
     hasError: bool
