@@ -3,7 +3,7 @@ export const INITIAL_STATE = {
     term: '',
     isLoading: false,
     hasError: false,
-    default_weather_data: {},
+    default_weather_data: [],
     weather_data: {}
   },
 };
