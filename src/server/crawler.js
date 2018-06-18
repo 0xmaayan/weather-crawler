@@ -4,7 +4,8 @@ import cheerio from 'cheerio';
 
 export const Weather = (city) => {
 
-  var name;
+  var country;
+  var city;
   var date;
   var day;
   var icon;
@@ -24,7 +25,8 @@ export const Weather = (city) => {
   return request(options)
           .then(function ($) {
             $('li.current').each(function(){
-              name = $(this).children().text();
+              country = $(this).prev().text();
+              city = $(this).children().text();
             })
             $('tr.b-forecast__table-days').each(function(){
               day = $(this).children()['1'].children['0'].children['0'].children['0'].data;
@@ -44,7 +46,8 @@ export const Weather = (city) => {
             })
             
             weather_data = {
-              'name':name,
+              'country': country,
+              'city':city,
               'day': day,
               'date': date,
               'icon':icon,

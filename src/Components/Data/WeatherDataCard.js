@@ -11,8 +11,8 @@ const WeatherDataCard = (props) => {
 
         <div id="header">
             <div className="cityName">
-              <span>City: </span>
-              <span>{weatherData.name}</span>
+              <span>{weatherData.country}, </span>
+              <span>{weatherData.city}</span>
             </div>
 
             <div className="degree col-md-6 col-sm-6 col-xs-6">
