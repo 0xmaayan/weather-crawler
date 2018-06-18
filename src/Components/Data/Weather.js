@@ -21,6 +21,7 @@ class Weather extends React.Component {
 
     return (
       <div className='col-md-12' style={{marginTop: '50px'}}>
+        <h1>Current Weather</h1>
         {data.map(this.renderData)}
       </div>
     )
