@@ -22,7 +22,8 @@ class App extends React.Component {
 
   componentDidMount(){
     const { getDefaulWeatherData } = this.props;
-    getDefaulWeatherData('London');
+    getDefaulWeatherData('New York');
+    getDefaulWeatherData('Tel Aviv Yafo');
   }
 
   
