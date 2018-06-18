@@ -9,7 +9,7 @@ import {
 export default function (state = INITIAL_STATE.site, action) {
   switch(action.type) {
     case SET_DEFAULT_WEATHER_DATA:
-      return {...state, default_weather_data: action.payload};
+      return {...state, default_weather_data : state.default_weather_data.concat(action.payload)};
     case IS_LOADING:
       return {...state, isLoading: action.isLoading};
     case HAS_ERROR:
