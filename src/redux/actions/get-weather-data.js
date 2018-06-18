@@ -5,11 +5,12 @@ import {
 } from './types';
 // crawler
 import { Weather } from '../../server/crawler';
+import slugify from 'slugify';
 
 export const getDefaulWeatherData = (city) => {  
 
   return (dispatch) => {
-    Weather(city).then(function(data) {
+    Weather(slugify(city)).then(function(data) {
       dispatch(setDefaultWeatherData(data));
     });
   }
