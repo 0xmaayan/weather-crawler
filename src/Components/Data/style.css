@@ -1,0 +1,48 @@
+#header {
+  position: relative;
+  height: 300px;
+  width: none;
+  background-color: #02c39a;
+  z-index: 1;
+  width: 100%;
+}
+
+
+#temperature-cell {
+  position: relative;
+  width: 60%;
+}
+#temperature-cell #temp-cell-number {
+  width: 100%;
+  text-align: center;
+}
+#temperature-cell #temp-cell-number h2 {
+  color: #f0f3bd;
+  font-size: 110px;
+  font-family: 'Roboto',sans-serif;
+  font-weight: bold;
+  margin: 30px 0px 0px 0px;
+  padding: 15px;
+}
+#temperature-cell #temp-cell-city {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+#temperature-cell #temp-cell-city p {
+  color: #f0f3bd;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 5px 0px;
+}
+#temperature-cell #temp-cell-degree {
+  height: .5em;
+  width: .5em;
+  border-radius: 50%;
+  border: 6px solid #f0f3bd;
+  position: absolute;
+  right: 40px;
+  top: 10px;
+}

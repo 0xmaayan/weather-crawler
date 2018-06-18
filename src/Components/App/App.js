@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import './App.css';
 // components
 import SearchBar from '../SearchBar/SearchBar';
+import Weather from '../Data/Weather';
 // actions
 import { getDefaulWeatherData } from '../../redux/actions/get-weather-data';
 
@@ -12,12 +13,6 @@ class App extends React.Component {
   constructor(props){
     super(props);
 
-    const { default_weather_data } = this.props.site;
-
-    this.state = {
-      default_weather_data: default_weather_data,
-    }
-    console.log(this.props);
   }
 
   componentDidMount(){
@@ -29,9 +24,12 @@ class App extends React.Component {
   
   render(){
 
+    const { default_weather_data } = this.props.site;
+
     return (
       <div>
         <SearchBar/>
+        <Weather data={default_weather_data}/>
       </div>
     )
   }
