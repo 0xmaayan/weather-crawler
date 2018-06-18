@@ -14,6 +14,10 @@ const WeatherDataCard = (props) => {
               <span>{weatherData.country}, </span>
               <span>{weatherData.city}</span>
             </div>
+            <div className="cityName">
+              <span>{weatherData.day}, </span>
+              <span>{weatherData.date}</span>
+            </div>
 
             <div className="degree col-md-6 col-sm-6 col-xs-6">
               <span>{weatherData.temp}</span>
