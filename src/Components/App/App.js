@@ -24,12 +24,12 @@ class App extends React.Component {
   
   render(){
 
-    const { default_weather_data } = this.props.site;
+    const { weather_data } = this.props.site;
 
     return (
       <div>
         <SearchBar/>
-        <Weather data={default_weather_data}/>
+        <Weather data={weather_data}/>
       </div>
     )
   }

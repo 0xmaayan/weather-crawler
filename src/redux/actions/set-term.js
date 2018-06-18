@@ -3,6 +3,18 @@ import {
   IS_LOADING,
   HAS_ERROR
 } from './types';
+import { Weather } from '../../server/crawler';
+import slugify from 'slugify';
+
+export const getTermData = (city) => {  
+
+  return (dispatch) => {
+    Weather(slugify(city)).then(function(data) {
+      dispatch(siteSetTerm(data));
+    });
+  }
+
+}
 
 
 export function siteSetTerm(data){

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // actions
-import { siteSetTerm } from '../../redux/actions/set-term';
+import { getTermData } from '../../redux/actions/set-term';
 
 class SearchBar extends React.Component {
 
@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
 
   onFormSubmit =  (e) => {
     e.preventDefault();
-    this.props.siteSetTerm(this.state.term);
+    this.props.getTermData(this.state.term);
   }
   
   render(){
@@ -45,7 +45,7 @@ class SearchBar extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    siteSetTerm: (term) => dispatch(siteSetTerm(term)),
+    getTermData: (term) => dispatch(getTermData(term)),
   }
 }
 

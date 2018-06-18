@@ -1,5 +1,5 @@
 import {
-  SET_DEFAULT_WEATHER_DATA,
+  SET_WEATHER_DATA,
   IS_LOADING,
   HAS_ERROR
 } from './types';
@@ -20,7 +20,7 @@ export const getDefaulWeatherData = (city) => {
 
 export function setDefaultWeatherData(data){
   return {
-    type: SET_DEFAULT_WEATHER_DATA,
+    type: SET_WEATHER_DATA,
     payload: data
   };
 }
