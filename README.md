@@ -1,4 +1,1 @@
-* git clone git@bitbucket.org:maayans/weather-crawler.git
-* cd weather-crawler
-* npm install
-* npm start
+An app that crawls a website and display the weather in the choosen location (by search)
